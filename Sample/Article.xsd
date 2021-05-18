@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+ targetNamespace="http://bindings.egain.com/ps/extension/migration/gen/kb"
+ xmlns="http://bindings.egain.com/ps/extension/migration/gen/kb"
+ elementFormDefault="qualified">
+ 
+ <xs:element name="exportedArticle" type="ExportedArticle" />
+ <xs:complexType name="ExportedArticle">
+ <xs:sequence>
+ <xs:element name="id" type="xs:string" minOccurs="1"
+ maxOccurs="1">
+ </xs:element>
+ <xs:element name="egainArticlePath" type="xs:string"
+ minOccurs="1" maxOccurs="1">
+ </xs:element>
+ <xs:element name="macro" type="Macro" minOccurs="0"
+ maxOccurs="1">
+ </xs:element>
+ <xs:element name="suggestionState" minOccurs="0"
+ maxOccurs="1">
+ <xs:simpleType>
+ <xs:restriction base="xs:string">
+ <xs:enumeration value="suggested" />
+ <xs:enumeration value="rejected" />
+ <xs:enumeration value="information requested" />
+ </xs:restriction>
+ </xs:simpleType>
+ </xs:element>
+ <xs:element name="reviewStage" type="ReviewStage"
+ minOccurs="0" maxOccurs="1" />
+ <xs:element name="langDataList" type="LangData"
+ minOccurs="1" maxOccurs="unbounded" />
+ <xs:element name="notes" type="Note" minOccurs="0"
+ maxOccurs="unbounded">
+ </xs:element>
+ <xs:element name="relatedQuestions" type="xs:string"
+ minOccurs="0" maxOccurs="unbounded" />
+ <xs:element name="egainTopicPathList" type="xs:string"
+ minOccurs="0" maxOccurs="unbounded" />
+ <xs:element name="createdDate" type="xs:string"
+ minOccurs="0" maxOccurs="1">
+ </xs:element>
+ <xs:element name="lastModifiedDate" type="xs:string"
+ minOccurs="0" maxOccurs="1">
+ </xs:element>
+ <xs:element name="createdBy" type="xs:string" minOccurs="0"
+ maxOccurs="1">
+ </xs:element>
+ <xs:element name="lastModifiedBy" type="xs:string"
+ minOccurs="0" maxOccurs="1">
+ </xs:element>
+ <xs:element name="customAttributeList" maxOccurs="unbounded"
+ minOccurs="0" type="CustomAttribute">
+ </xs:element>
+ <xs:element name="relatedArticles" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+ <xs:element name="linkAlias" type="xs:string" minOccurs="0" maxOccurs="1" />
+ </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="LangData">
+ <xs:sequence>
+ <xs:element name="language" minOccurs="1" maxOccurs="1">
+ <xs:simpleType>
+ <xs:restriction base="xs:string">
+ <xs:enumeration value="en-us"></xs:enumeration>
+ <xs:enumeration value="en-gb"></xs:enumeration>
+ <xs:enumeration value="fr-fr"></xs:enumeration>
+ <xs:enumeration value="es-es"></xs:enumeration>
+ <xs:enumeration value="it-it"></xs:enumeration>
+ <xs:enumeration value="de-de"></xs:enumeration>
+ <xs:enumeration value="nl-nl"></xs:enumeration>
+ <xs:enumeration value="pt-br"></xs:enumeration>
+ <xs:enumeration value="pt-pt"></xs:enumeration>
+ <xs:enumeration value="da-dk"></xs:enumeration>
+ <xs:enumeration value="ru-ru"></xs:enumeration>
+ <xs:enumeration value="zh-cn"></xs:enumeration>
+ <xs:enumeration value="sv-se"></xs:enumeration>
+ <xs:enumeration value="fi-fi"></xs:enumeration>
+ <xs:enumeration value="nb-no"></xs:enumeration>
+ <xs:enumeration value="nn-no"></xs:enumeration>
+ <xs:enumeration value="zh-tw"></xs:enumeration>
+ <xs:enumeration value="tr-tr"></xs:enumeration>
+ <xs:enumeration value="pl-pl"></xs:enumeration>
+ <xs:enumeration value="cs-cz"></xs:enumeration>
+ <xs:enumeration value="hu-hu"></xs:enumeration>
+ <xs:enumeration value="ar-sa"></xs:enumeration>
+ <xs:enumeration value="ro-ro"></xs:enumeration>
+ <xs:enumeration value="ja-jp"></xs:enumeration>
+ <xs:enumeration value="ko-kr"></xs:enumeration>
+ <xs:enumeration value="el-gr"></xs:enumeration>
+ </xs:restriction>
+ </xs:simpleType>
+ </xs:element>
+ <xs:element name="versionDataList" type="VersionData"
+ minOccurs="1" maxOccurs="unbounded" />
+ </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="VersionData">
+ <xs:sequence>
+ <xs:element name="versionNumber" type="xs:string" minOccurs="1"
+ maxOccurs="1" />
+ <xs:element name="name" type="xs:string" minOccurs="1"
+ maxOccurs="1" />
+ <xs:element name="description" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="label" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="articleType" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="keywords" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="summary" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="additionalInfo" type="xs:string"
+ minOccurs="0" maxOccurs="1" />
+ <xs:element name="content" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="availabilityDate" type="xs:string"
+ minOccurs="0" maxOccurs="1" />
+ <xs:element name="expirationDate" type="xs:string"
+ minOccurs="0" maxOccurs="1" />
+ <xs:element name="imageUrl" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="attachmentList" type="Attachment"
+ minOccurs="0" maxOccurs="unbounded" />
+ <xs:element name="createdDate" type="xs:string" minOccurs="0"
+ maxOccurs="1">
+ </xs:element>
+ <xs:element name="lastModifiedDate" type="xs:string"
+ minOccurs="0" maxOccurs="1">
+ </xs:element>
+ <xs:element name="createdBy" type="xs:string" minOccurs="0"
+ maxOccurs="1"></xs:element>
+ <xs:element name="lastModifiedBy" type="xs:string" minOccurs="0"
+ maxOccurs="1">
+ </xs:element>
+ <xs:element name="linkedAliases" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+ <xs:element name="containsLinks" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+ </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="Macro">
+ <xs:sequence>
+ <xs:element name="name" type="xs:string" minOccurs="1"
+ maxOccurs="1" />
+ <xs:element name="description" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="defaultArticle" type="xs:string"
+ minOccurs="0" maxOccurs="1">
+ </xs:element>
+ <xs:element name="defaultValue" type="xs:string"
+ minOccurs="0" maxOccurs="1" />
+ </xs:sequence>
+ </xs:complexType>
+ <xs:complexType name="Attachment">
+ <xs:sequence>
+ <xs:element name="id" type="xs:long" minOccurs="1"
+ maxOccurs="1" />
+ <!-- Internal attachment file name -->
+ <xs:element name="fileName" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <!-- attachment type: internal or external -->
+ <xs:element name="type" minOccurs="0" maxOccurs="1">
+ <xs:simpleType>
+ <xs:restriction base="xs:string">
+ <xs:enumeration value="internal" />
+ <xs:enumeration value="external" />
+ </xs:restriction>
+ </xs:simpleType>
+ </xs:element>
+ <!-- file path (UNC or URL) of external attachment -->
+ <xs:element name="filePath" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="loginName" type="xs:string" minOccurs="0"
+ maxOccurs="1" />
+ <xs:element name="loginPassword" type="xs:string"
+ minOccurs="0" maxOccurs="1" />
+ <xs:element name="contentFetchOption" minOccurs="0"
+ maxOccurs="1">
+ <xs:simpleType>
+ <xs:restriction base="xs:string">
+ <xs:enumeration value="always_latest_version" />
+ <xs:enumeration value="latest_if_available" />
+ <xs:enumeration value="local_copy" />
+ </xs:restriction>
+ </xs:simpleType>
+ </xs:element>
+ </xs:sequence>
+ </xs:complexType>
+ 
+ <xs:complexType name="Note">
+ <xs:sequence>
+ <xs:element name="content" type="xs:string" minOccurs="1"
+ maxOccurs="1">
+ </xs:element>
+ <xs:element name="createdBy" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+ <xs:element name="createdDate" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
+ </xs:sequence>
+ </xs:complexType>
+ 
+ <xs:complexType name="CustomAttribute">
+ <xs:sequence>
+ <xs:element name="name" type="xs:string"></xs:element>
+ <xs:element name="value" type="xs:string"></xs:element>
+ </xs:sequence>
+ <xs:attribute name="type" type="xs:string"/>
+ </xs:complexType>
+  
+ <xs:complexType name="ReviewStage">
+ <xs:sequence>
+ <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+ </xs:sequence>
+ <xs:attribute name="id" type="xs:long"/>
+ </xs:complexType>
+</xs:schema>
