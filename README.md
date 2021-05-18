@@ -23,7 +23,7 @@ NOTE : Import will only create topics, folders and articles, Import tool doesn't
 This Sample in sample folder includes XSDs and a zip file which has the xmls in required hierarchy.
 
  XSDs -  Topic.xsd, Folder.xsd,  Article.xsd
- Sample zip with xmls - eGain_Exported_Content.zip
+ Sample zip with xmls - eGain_Import_Sample.zip
  
 
 # XML Grammar
