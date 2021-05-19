@@ -66,7 +66,7 @@ egainTopicPath :      " \Topics\Policy\Leaves:Paid leave"	|String |Yes
 |Attribute | Description | Type| Mandatory
 |---------------|-------------|------|-------|
 |id |This is unique ID of article. If content is exported from eGain environment then this ID can be of the source eGain object and in case exported XML files are created from HTML, PDF etc. then this ID should be programmatically generated and mentioned in ID element of object XML files. |String |	Yes
-|egainArticlePath |eGain Article Path will be path to eGain Folder that contains article and article name. egainFolderPath:     "\Content\Shared\Texting#fSlash#SMS-MMS\Agent Calling" egainArticlePath:  "\Content\Shared\Texting#fSlash#SMS-MMS\Agent Calling\Leaves:Paid leave" | String	Yes
+|egainArticlePath |eGain Article Path will be path to eGain Folder that contains article and article name. egainFolderPath:     "\Content\Shared\Texting#fSlash#SMS-MMS\Agent Calling" egainArticlePath:  "\Content\Shared\Texting#fSlash#SMS-MMS\Agent Calling\Leaves:Paid leave" | String |	Yes
 | macro | This field denotes if this article can be used as a macro. If this element is present, it must have its 'name' element. Other elements of macro are optional.| Macro|	No
 |langDataList |List of all languages and language specific versions. |LangData |Yes
 | notes | List of notes attached to the article. If this element is present then it must contain atleast one 'Note' element and this 'Note' element must have the 'content' attribute. |Note | No
@@ -84,7 +84,7 @@ egainTopicPath :      " \Topics\Policy\Leaves:Paid leave"	|String |Yes
 
 |Attribute | Description | Type| Mandatory
 |---------------|-------------|------|-------|
-|name |Name of the macro |String | Yes
+|name |Name of the macro |String |Yes
 |description |Description of the macro |String |No
 |defaultArticle |Default article with the macro |String |No
 |defaultValue |Default value of macro |String |No
